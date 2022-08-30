@@ -57,7 +57,7 @@ function Session(args...; kwargs...)
     if haskey(kwargs, :config)
         sess = tf.compat.v1.Session(args...;kwargs...)
     else
-        config = tf.ConfigProto(;kwargs_...)
+        config = tf.compat.v1.ConfigProto(;kwargs_...)
         sess = tf.compat.v1.Session(config = config)
     end
     
